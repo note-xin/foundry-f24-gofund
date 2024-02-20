@@ -118,7 +118,7 @@ we run it see how much the tests we done is 'enough' but (0 % is bad).
     here we deploy the contract to a sepolia testnet by running the following command:
 
     ```
-    forge script script/DeployFundMe.s.sol --rpc-url $SEPOLIA_RPC_URL --private-key $PRIVATE_KEY --broadcast --verify --etherscan-api-key $ETHERSCAN_API_KEY
+    forge script script/Deploy.s.sol --rpc-url $SEPOLIA_RPC_URL --private-key $PRIVATE_KEY --broadcast --verify --etherscan-api-key $ETHERSCAN_API_KEY
     ```
 
 ## Scripts
@@ -129,12 +129,12 @@ Using cast for a localy deployed contract:
 ### Fund
 
 ```
-cast send <FUNDME_CONTRACT_ADDRESS> "fund()" --value 0.1ether --private-key <PRIVATE_KEY>
+cast send <GOFUND_CONTRACT_ADDRESS> "fund()" --value 0.1ether --private-key <PRIVATE_KEY>
 ```
 ### Withdraw
 
 ```
-cast send <FUNDME_CONTRACT_ADDRESS> "withdraw()"  --private-key <PRIVATE_KEY>
+cast send <GOFUND_CONTRACT_ADDRESS> "withdraw()"  --private-key <PRIVATE_KEY>
 ```
 
 ### Interacting intest net
